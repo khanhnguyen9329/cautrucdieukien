@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>Đơn vị Mét (m) </td>
+        <td>Đơn vị feet (ft)</td>
+    </tr>
+    <tr>
+        <td><input type="number" id="met"></td>
+        <td> <input type="number" id="feet"></td>
+    </tr>
+    <tr>
+        <td>
+            <input onclick="result1()" type="submit" value="Kết quả">
+        </td>
+    </tr>
+</table>
+<script>
+    function result1(){
+        let meter= +document.getElementById("met").value;
+        let result= meter * 3.2808
+
+        document.getElementById("feet").value = result
+    }
+</script>
+</body>
+</html>

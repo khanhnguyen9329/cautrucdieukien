@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table class="demo">
+    <tr>
+        <td>Số Nhiệt độ</td>
+        <td> From</td>
+        <td> To</td>
+        <td><button onclick="result1()">Kết quả</button></td>
+    </tr>
+    <tr>
+        <td><input type="number" id="temperature"></td>
+        <td><select id="from">
+            <option >Độ C</option>
+            <option >Độ F</option>
+        </select>
+
+        </td>
+        <td>
+            <select id="to">
+                <option >Độ F</option>
+                <option >Độ C</option>
+            </select>
+        </td>
+        <td><input type="text" id="result"></td>
+    </tr>
+</table>
+<script>
+function result1() {
+    let poison = +document.getElementById("temperature").value;
+    let From = document.getElementById("from").value;
+    let To = document.getElementById("to").value;
+    let result
+    if (From == "Độ C"&& To == "Độ F" ){
+        result = ((9/5) * poison)+32
+    }else if ( From =="Độ F" && To == "Độ C") {
+
+        result = (5/9)*(poison -32)
+    }else if (From == "Độ C"&& To == " Độ C" ){
+        result = poison
+
+    }else {
+        result = poison
+    }
+    document.getElementById("result").value = result
+}
+</script>
+<style>
+    .demo {
+        border:10px green groove;
+        background: aqua;
+        color: blueviolet;
+    }
+</style>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head><H1>GIẢI PHƯƠNG TRÌNH BẬC NHẤT</H1>
+<h2>ax+b=0</h2>
+ <table>
+     <tr>
+         <td>nhập a</td>
+         <td>nhập b</td>
+         <td> x</td>
+     </tr>
+     <tr>
+         <td><input type="number" id="demo"></td>
+         <td><input type="number" id="demo1"></td>
+         <td><input type="text" id="ketqua"></td>
+     </tr>
+     <tr>
+         <td><input onclick="result1()" type="submit" value="kết quả"></td>
+     </tr>
+ </table>
+
+<body><script>
+    function result1(){
+    let a = +document.getElementById("demo").value;
+    let b = +document.getElementById("demo1").value;
+    let results =""
+
+        if (a==0 && b ==0){
+            results = ("phương trình vô số nghiệm");
+
+        } else if (a != 0&& b == 0){
+            results = ("phương trình có nghiệm = 0");
+
+        } else if (a == 0 && b!= 0){
+            results = ("phương trình vô nghiệm");
+
+        }else {
+            results = (-b/a)
+        }
+   document.getElementById("ketqua").value = results
+    }
+    // let a = parseInt(prompt("nhập số a"));
+    // let b = parseInt(prompt("nhập số b"));
+    //
+    // if (a ==0 && b==0 ){
+    //  alert ("phương trình vô số nghiệp");
+    // } else if (a!=0 && b==0){
+    //     alert("phương trình có nghiệm x = 0")
+    // }else if (a ==0 && b!=0){
+    //     alert("phương trình vô nghiệm")
+    // }else {
+    //     alert("phương trình có nghiệm x =" +(-b/a))
+    // }
+
+
+
+</script>
+
+</body>
+</html>
